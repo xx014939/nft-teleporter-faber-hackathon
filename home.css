@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header {
+    background-color: #6abcff;
+    padding: 10px 50px;
+    text-align: center;
+    max-height: 140px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.body {
+    text-align: center;
+}
+
+.header__menu-items-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.header__menu-items-container a {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.header__menu-items-container a:hover {
+    color: white;
+}
