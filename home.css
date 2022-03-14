@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -13,6 +13,13 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: -20px;
+    border-bottom: 2px solid black;
+}
+
+.hero {
+    background-color: #6abcff;
+    height: 600px;
 }
 
 .body {
