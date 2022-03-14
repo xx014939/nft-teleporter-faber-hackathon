@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
-<script src="main.js"></script>
 
 <link rel="stylesheet" href="uploadNFT.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +16,17 @@
   <label>NFT Name</label>
   <input type="text" id="nftName" name="Name">
   <label>NFT Description</label>
-  <input type="text" id="nftDescription" name="description">
+  <textarea type="text" id="nftDescription" name="description"></textarea>
   <input class="submit-button" type="submit" onclick="onSubmit()">
 </div>
 
+<div class="teleport__container">
+  <a href="/view-nft.html" class="teleport-button">Teleport</a>
+</div>
+
+<div class="ethAddress" style="display: none;"></div>
+
 </body>
 </html>
+
+<script src="main.js"></script>

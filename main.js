@@ -16,15 +16,16 @@ if (!user) {
     }
 }
 else{
-    console.log('starting2', user.get('ethAddress'))
+    document.querySelector('.ethAddress').innerHTML = user.get('ethAddress')
     Moralis.enableWeb3();
     initApp();
     }
+    console.log(user)
 }
 
 // Call login function immediately on page load and save ETH address
 login()
-const userWalletAddress = user.get('ethAddress')
+const userWalletAddress = document.querySelector('.ethAddress').innerHTML
 
 async function checkUserExists(address) {
     // Make GET request to express server
@@ -38,11 +39,15 @@ checkUserExists(userWalletAddress)
 
 async function onSubmit() {
     // Retrieve file
-    mainFile = document.getElementById('myFile').files[0]
-    console.log('here it is -->', mainFile)
+    imageFile = document.getElementById('myFile').files[0]
+    console.log('here it is -->', imageFile)
+
+    // Retrieve metadata
+    let nftName = document.getElementById('nftName').value
+    let nftDescription = document.getElementById('nftDescription').value
 
     // Save to IPFS
-    const data = mainFile
+    const data = imageFile
     const file = new Moralis.File(data.name, data)
     await file.saveIPFS({useMasterKey:true});
 
@@ -54,8 +59,8 @@ async function onSubmit() {
     let imageHash = file.hash()
 
     let metadata = {
-        name: threedName,
-        description: document.querySelector('#input_description').value,
+        name: nftName,
+        description: nftDescription,
         image: "/ipfs/" + imageHash
     }
     console.log(metadata);
@@ -65,5 +70,8 @@ async function onSubmit() {
     console.log(metadataHash)
 
     // POST file info to Express server
+
+    // Make teleport button visible to user
+    document.querySelector('.teleport-button').style.display = 'block'
 
 }
