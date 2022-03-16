@@ -9,14 +9,22 @@
 <html>
 <body>
 
-<p>Click on the "Choose File" button to upload a file:</p>
-
 <div class="input__container">
+  <label>Wallet ID (from authenticator)</label>
+  <input type="text" id="walletID" name="WalletID">
+
+  <label>Upload 2D NFT Image</label>
   <input type="file" id="myFile" name="filename">
+
+  <label>Upload 3D NFT Model</label>
+  <input type="file" id="myFile3d" name="filename3d">
+
   <label>NFT Name</label>
   <input type="text" id="nftName" name="Name">
+
   <label>NFT Description</label>
   <textarea type="text" id="nftDescription" name="description"></textarea>
+
   <input class="submit-button" type="submit" onclick="onSubmit()">
 </div>
 
@@ -24,9 +32,7 @@
   <a href="/view-nft.html" class="teleport-button">Teleport</a>
 </div>
 
-<div class="ethAddress" style="display: none;"></div>
-
 </body>
 </html>
 
-<script src="main.js"></script>
+<script src="/js/main.js"></script>

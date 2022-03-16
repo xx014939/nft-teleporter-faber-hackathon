@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wallet Authentication</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <div>
+          <button onclick="walletAuth()">Authenticate Wallet</button>
+      </div>
+      <label class="login-form__label" style="text-align: center; margin-top: 10px;">Your wallet ID will appear below after authentication is finished</label>
+      <div class="login-form__wallet-id"></div>
+      <label class="login-form__id-message">Please save this ID as it is needed in order to access our services</label>
+  </body>
+  <script src="./js/walletAuth.js"></script>
+</html>
