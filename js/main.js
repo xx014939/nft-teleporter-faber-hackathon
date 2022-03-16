@@ -27,7 +27,7 @@ async function onSubmit() {
     await file.saveIPFS({useMasterKey:true});
 
     const data3D = imageFile3D
-    const file3D = new Moralis.File(data.name, data)
+    const file3D = new Moralis.File(data3D.name, data3D)
     await file3D.saveIPFS({useMasterKey:true});
 
     // Console log IPFS URL, and IPFS file CID
@@ -37,8 +37,8 @@ async function onSubmit() {
     let imageURL = file.ipfs()
     let imageHash = file.hash()
 
-    let image3DURL = file.ipfs()
-    let image3DHash = file.hash()
+    let image3DURL = file3D.ipfs()
+    let image3DHash = file3D.hash()
 
     let metadata = {
         ipfs2DImageLink: imageURL,
