@@ -25,7 +25,7 @@ async function getAssets (walletID) {
     const image3D = assetURLs[1]
 
     // Create AFRAME page 
-    document.querySelector('.testing').innerHTML = 
+    document.body.innerHTML = 
     `
     <a-scene vr-mode-ui="enabled: true">
         
