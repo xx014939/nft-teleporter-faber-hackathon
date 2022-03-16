@@ -96,7 +96,8 @@ async function onSubmit() {
     lazyMintButton.style.display = 'flex'
 
     // Lazy mint NFT on click
-    lazyMintButton.addEventListener('click', () => {
+    lazyMintButton.addEventListener('click', async () => {
+        web3 = await Moralis.enableWeb3()
         let res = await Moralis.Plugins.rarible.lazyMint({
             chain: 'eth',
             userAddress: user.get('ethAddress'),
