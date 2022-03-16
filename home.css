@@ -89,3 +89,25 @@ body {
     cursor:default;
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
+
+.diagram-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diagram-container img {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #6abcff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+}
