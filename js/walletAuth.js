@@ -7,10 +7,10 @@ async function walletAuth () {
     let user = Moralis.User.current();
   
 
-    // Log user wallet in
+    // Authenticate User
     if (!user) {
         try {
-            user = await Moralis.authenticate({ signingMessage: "Hello World!" })
+            user = await Moralis.authenticate({ signingMessage: "Authenticate Wallet" })
         } catch(error) {
             console.log(error)
         }

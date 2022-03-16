@@ -41,17 +41,12 @@ async function onSubmit() {
     let image3DHash = file3D.hash()
 
     let metadata = {
+        name: nftName,
+        description: nftDescription,
         ipfs2DImageLink: imageURL,
-        ipfs3DImageLink: image3DURL,
-        ipfsMetadataLinks: [
-            {
-                name: nftName,
-                description: nftDescription,
-                image: "/ipfs/" + imageHash,
-                model: "/ipfs/" + image3DHash
-            }
-        ],
+        ipfs3DImageLink: image3DURL
     }
+
     console.log(metadata);
     const jsonFile = new Moralis.File("metadata.json", {base64 : btoa(JSON.stringify(metadata))});
     await jsonFile.saveIPFS();
@@ -96,4 +91,20 @@ async function onSubmit() {
     // Make teleport button visible to user
     document.querySelector('.teleport-button').style.display = 'block'
 
+    // Make lazy mint button visible to user
+    const lazyMintButton = document.querySelector('.lazy-mint__container')
+    lazyMintButton.style.display = 'flex'
+
+    // Lazy mint NFT on click
+    lazyMintButton.addEventListener('click', () => {
+        let res = await Moralis.Plugins.rarible.lazyMint({
+            chain: 'eth',
+            userAddress: user.get('ethAddress'),
+            tokenType: 'ERC721',
+            tokenUri: 'ipfs://' + tokenURI,
+            royaltiesAmount: 5, // 0.05% royalty. Optional
+        })
+
+        alert('Your NFT has been lazy minted on Rarible. Please view this wallets contents on Rarible to see your NFT')
+    })
 }

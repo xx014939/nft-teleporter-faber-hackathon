@@ -47,3 +47,26 @@ body {
     max-width: 200px;
     display: none;
 }
+
+.lazy-mint__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: none;
+}
+
+.lazy-mint__container div {
+    margin-top: 10px;
+}
+
+.lazy-mint-button {
+    padding: 10px;
+    background-color: #6abcff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+}
