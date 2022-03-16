@@ -1,0 +1,37 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #6abcff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+}
+
+.login-form__wallet-id {
+    color: white;
+}
+
+.wallet-id__container {
+    background-color: black;
+    padding: 20px;
+}
+
+.upload-nft {
+    display: none;
+}
+
+.upload-nft__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}

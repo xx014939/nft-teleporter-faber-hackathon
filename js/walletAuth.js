@@ -35,6 +35,7 @@ async function walletAuth () {
             walletID = JSON.parse(xhr.responseText)
             document.querySelector('.login-form__wallet-id').innerHTML = walletID._id
             document.querySelector('.login-form__id-message').style.display = "block"
+            document.querySelector('.upload-nft').style.display = 'block'
             document.querySelector('.button-container').style.display = 'flex'
         }};
 

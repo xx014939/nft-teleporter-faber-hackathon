@@ -11,15 +11,35 @@ body {
     max-height: 140px;
     overflow: hidden;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-bottom: -20px;
     border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    font-weight: bold;
 }
 
 .hero {
     background-color: #6abcff;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     height: 600px;
+    padding-top: 10px;
+}
+
+.hero div img {
+    max-width: 800px;
+}
+
+.hero div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero div h2 {
+    font-size: 30px;
 }
 
 .body {
@@ -29,7 +49,6 @@ body {
 .header__menu-items-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
 }
 
 .header__menu-items-container a {
@@ -41,4 +60,32 @@ body {
 
 .header__menu-items-container a:hover {
     color: white;
+}
+
+.how-it-works__container {
+    text-align: center;
+}
+
+.how-it-works__container h2 {
+    font-size: 30px;
+}
+
+.how-it-works__points-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.how-it-works__points h3 {
+    color: #6abcff;
+    font-size: 24px;
+}
+
+.how-it-works__points {
+    padding: 20px;
+    transition: 0.8s;
+}
+
+.how-it-works__points:hover {
+    cursor:default;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
