@@ -17,16 +17,12 @@ async function getAssets (walletID) {
     let data = await response.json()
     console.log(data)
     assetURLs = data.ipfsImageLinks[0].split(',')
-    console.log('asset urls', assetURLs)
-    console.log('asset urls2', data.ipfsImageLinks[1])
-
+    
     // 2D Image
     const image2D = assetURLs[0]
-    console.log('2d image', image2D)
 
     // 3D Image
     const image3D = assetURLs[1]
-    console.log('3d image', image3D)
 
     // Create AFRAME page 
     document.querySelector('.testing').innerHTML = 
