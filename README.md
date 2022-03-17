@@ -18,4 +18,4 @@
 ## Once this is finished, close the prompt and proceed with the "Teleport" button to teleport your NFT into a 3D VR traversible environment!
 <img src="/readme-images/hack-6.PNG"/>
 
-## You have just lazy minted multiple assets in different dimensions all inside of a single NFT! These assets can be viewed in our simple example scene, but they can also be retrieved via our rest API for any bespoke software you wish to build. To retrieve this data make a GET request to https://warm-journey-29417.herokuapp.com//nfts/{wallet ID}
+## You have just lazy minted multiple assets in different dimensions all inside of a single NFT! These assets can be viewed in our simple example scene, but they can also be retrieved via our rest API for any bespoke software you wish to build. To retrieve this data make a GET request to https://warm-journey-29417.herokuapp.com/nfts/{wallet ID}

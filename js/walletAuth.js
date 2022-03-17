@@ -21,7 +21,7 @@ async function walletAuth () {
 
     // Push wallet to express server to create an empty object
     var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://warm-journey-29417.herokuapp.com//nfts");
+        xhr.open("POST", "https://warm-journey-29417.herokuapp.com/nfts");
         xhr.setRequestHeader("Accept", "application/json");
         xhr.setRequestHeader("Content-Type", "application/json");
 
