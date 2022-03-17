@@ -54,7 +54,7 @@ async function onSubmit() {
     console.log("The NFT Token URI is -->", tokenURI)
 
     // Retrieve existing data associated with wallet
-    const response = await fetch(`http://localhost:3000/nfts/${walletID}`)
+    const response = await fetch(`https://warm-journey-29417.herokuapp.com//nfts/${walletID}`)
     const payload = await response.json()
 
     let existinImageLinks = payload.ipfsImageLinks
@@ -70,7 +70,7 @@ async function onSubmit() {
 
     // PATCH info to Express server
     var xhr = new XMLHttpRequest();
-    xhr.open("PATCH", `http://localhost:3000/nfts/${walletID}`);
+    xhr.open("PATCH", `https://warm-journey-29417.herokuapp.com//nfts/${walletID}`);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/json");
 

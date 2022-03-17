@@ -13,7 +13,7 @@ console.log("the text is --->", text)
 // GET IPFS URL's from server
 
 async function getAssets (walletID) {
-    const response = await fetch(`http://localhost:3000/nfts/${walletID}`)
+    const response = await fetch(`https://warm-journey-29417.herokuapp.com//nfts/${walletID}`)
     let data = await response.json()
     console.log(data)
     assetURLs = data.ipfsImageLinks[0].split(',')
