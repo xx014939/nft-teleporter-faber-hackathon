@@ -23,13 +23,27 @@ body {
     background-color: #6abcff;
     color: white;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 600px;
+    grid-template-columns: repeat(1,1fr);
+    height: 900px;
     padding-top: 10px;
 }
 
+@media (min-width: 769px) {
+    .hero {
+        grid-template-columns: repeat(2,1fr);
+        height: 600px;
+    }
+}
+
 .hero div img {
-    max-width: 800px;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .hero div img {
+        max-width: 800px;
+    }
+    
 }
 
 .hero div {
@@ -72,7 +86,13 @@ body {
 
 .how-it-works__points-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width: 769px) {
+    .how-it-works__points-container {
+        grid-template-columns: repeat(2,1fr);
+    } 
 }
 
 .how-it-works__points h3 {
