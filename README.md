@@ -4,5 +4,4 @@
 # Get Started
 ## Visit our website at nftteleporter.com, and click the "Authenticate Wallet" button at the bottom of the page
 
-
-
+(/readme-images/hack-1.PNG)
